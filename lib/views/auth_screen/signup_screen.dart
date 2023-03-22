@@ -7,9 +7,13 @@ import '../../widgets_common/bg_wdget.dart';
 import '../../widgets_common/custom_textfeld.dart';
 import '../../widgets_common/out_button.dart';
 
-class SignupScreen extends StatelessWidget {
-  const SignupScreen({super.key});
+class SignupScreen extends StatefulWidget {
+  @override
+  State<SignupScreen> createState() => _SignupScreenState();
+}
 
+class _SignupScreenState extends State<SignupScreen> {
+  bool isCheck = false;
   @override
   Widget build(BuildContext context) {
     return bgWidget(
@@ -44,9 +48,14 @@ class SignupScreen extends StatelessWidget {
                 Row(
                   children: [
                     Checkbox(
-                      checkColor: redColor,
-                      value: false,
-                      onChanged: (newValue) {},
+                      activeColor: redColor,
+                      checkColor: whiteColor,
+                      value: isCheck,
+                      onChanged: (newValue) {
+                        setState(() {
+                          isCheck = newValue!;
+                        });
+                      },
                     ),
                     5.widthBox,
                     Expanded(
@@ -55,22 +64,30 @@ class SignupScreen extends StatelessWidget {
                         TextSpan(
                           text: 'I agree to the ',
                           style: TextStyle(
-                              fontFamily: bold, color: fontGrey, fontSize: 13),
+                              fontFamily: regular,
+                              color: fontGrey,
+                              fontSize: 13),
                         ),
                         TextSpan(
                           text: termAndCond,
                           style: TextStyle(
-                              fontFamily: bold, color: redColor, fontSize: 13),
+                              fontFamily: regular,
+                              color: redColor,
+                              fontSize: 13),
                         ),
                         TextSpan(
-                          text: '& ',
+                          text: ' & ',
                           style: TextStyle(
-                              fontFamily: bold, color: fontGrey, fontSize: 13),
+                              fontFamily: regular,
+                              color: fontGrey,
+                              fontSize: 13),
                         ),
                         TextSpan(
                           text: privacyPolicy,
                           style: TextStyle(
-                              fontFamily: bold, color: redColor, fontSize: 13),
+                              fontFamily: regular,
+                              color: redColor,
+                              fontSize: 13),
                         ),
                       ])),
                     )
@@ -78,7 +95,7 @@ class SignupScreen extends StatelessWidget {
                 ),
                 5.heightBox,
                 ourButton(
-                  color: redColor,
+                  color: isCheck == true ? redColor : Colors.grey,
                   onPress: () {},
                   textColor: whiteColor,
                   title: signup,
@@ -89,7 +106,7 @@ class SignupScreen extends StatelessWidget {
                   TextSpan(
                     text: alreadyHaveAccount,
                     style: TextStyle(
-                        fontFamily: bold, fontSize: 13, color: fontGrey),
+                        fontFamily: regular, fontSize: 13, color: fontGrey),
                   ),
                   TextSpan(
                     text: login,
