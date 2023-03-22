@@ -33,4 +33,14 @@ const searchanything = 'Search anything...',
     brand = 'Brand',
     topCategories = 'Top Categories',
     featuredCategories = 'Featured Categories';
-    //.........................
+//.........................
+
+// Home feature Button Item
+const womenDress = 'Women Dress',
+    girlsWatches = 'Girls Watches',
+    boysGlasses = 'Boys Glasses',
+    tShirts = 'T-Shirts',
+    girlsDress = 'Girls Dresses',
+    mobilePhone = 'Mobile Phone';
+//.......................................
+const FeaturedProduct = 'Featured Product';

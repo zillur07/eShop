@@ -2,6 +2,7 @@ import 'package:eshop_app/widgets_common/homeButtons.dart';
 
 import '../../consts/consts.dart';
 import '../../consts/lists.dart';
+import 'components/featured_button.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -109,7 +110,7 @@ class HomeScreen extends StatelessWidget {
                   ),
 
                   // Featured Categories
-                  10.heightBox,
+                  15.heightBox,
                   Align(
                     alignment: Alignment.centerLeft,
                     child: featuredCategories.text
@@ -118,6 +119,45 @@ class HomeScreen extends StatelessWidget {
                         .size(18)
                         .make(),
                   ),
+                  15.heightBox,
+                  SingleChildScrollView(
+                    physics: BouncingScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: List.generate(
+                        3,
+                        (index) => Column(
+                          children: [
+                            featureButton(
+                              icon: featuredImages1[index],
+                              title: freaturedTitles1[index],
+                            ),
+                            10.heightBox,
+                            featureButton(
+                              icon: featuredImages2[index],
+                              title: freaturedTitles2[index],
+                            ),
+                          ],
+                        ),
+                      ).toList(),
+                    ),
+                  ),
+
+                  // Freatued Product
+                  20.heightBox,
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(12),
+                    decoration: BoxDecoration(color: redColor),
+                    child: Column(
+                      children: [
+                        FeaturedProduct.text.white
+                            .fontFamily(bold)
+                            .size(18)
+                            .make()
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
