@@ -36,10 +36,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   velocity_x:
   get:
+  dio:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: 
+  json_serializable: 
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

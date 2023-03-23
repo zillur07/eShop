@@ -150,14 +150,120 @@ class HomeScreen extends StatelessWidget {
                     padding: EdgeInsets.all(12),
                     decoration: BoxDecoration(color: redColor),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         FeaturedProduct.text.white
                             .fontFamily(bold)
                             .size(18)
-                            .make()
+                            .make(),
+                        10.heightBox,
+                        SingleChildScrollView(
+                          physics: BouncingScrollPhysics(),
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: List.generate(
+                              6,
+                              (index) => Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                    imgP1,
+                                    width: 150,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  10.heightBox,
+                                  'Laptop 8GB/200GB'
+                                      .text
+                                      .semiBold
+                                      .color(darkFontGrey)
+                                      .make(),
+                                  10.heightBox,
+                                  '\$6000'
+                                      .text
+                                      .size(16)
+                                      .color(redColor)
+                                      .fontFamily(bold)
+                                      .make()
+                                ],
+                              )
+                                  .box
+                                  .white
+                                  .roundedSM
+                                  .margin(EdgeInsets.symmetric(
+                                    horizontal: 6,
+                                  ))
+                                  .padding(EdgeInsets.all(8))
+                                  .make(),
+                            ),
+                          ),
+                        )
                       ],
                     ),
-                  )
+                  ),
+
+                  // Third Swiper..............
+                  10.heightBox,
+                  VxSwiper.builder(
+                      height: 135,
+                      enlargeCenterPage: false,
+                      autoPlay: true,
+                      aspectRatio: 10 / 5,
+                      itemCount: secondSlidersList.length,
+                      itemBuilder: (context, index) {
+                        return Image.asset(
+                          secondSlidersList[index],
+                          fit: BoxFit.fill,
+                        )
+                            .box
+                            .rounded
+                            .clip(Clip.antiAlias)
+                            .margin(const EdgeInsets.symmetric(
+                              horizontal: 2,
+                            ))
+                            .make();
+                      }),
+
+                  // All product list Section ...............
+                  20.heightBox,
+                  GridView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 8,
+                      crossAxisSpacing: 8,
+                      mainAxisExtent: 280,
+                    ),
+                    itemCount: 6,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            imgP5,
+                            height: 190,
+                            width: 190,
+                            fit: BoxFit.cover,
+                          ),
+                          10.heightBox,
+                          Spacer(),
+                          'Laptop 8GB/200GB'
+                              .text
+                              .semiBold
+                              .color(darkFontGrey)
+                              .make(),
+                          10.heightBox,
+                          '\$6000'
+                              .text
+                              .size(16)
+                              .color(redColor)
+                              .fontFamily(bold)
+                              .make()
+                        ],
+                      ).box.white.roundedSM.padding(EdgeInsets.all(12)).make();
+                    },
+                  ),
                 ],
               ),
             ),

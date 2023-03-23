@@ -44,3 +44,17 @@ const womenDress = 'Women Dress',
     mobilePhone = 'Mobile Phone';
 //.......................................
 const FeaturedProduct = 'Featured Product';
+
+// Category strings
+const womenClothing = 'Women clothing',
+    menClothingFashion = 'Men Clothing & Fashion',
+    compAccess = 'Computer & Accessories',
+    automobile = 'Automobile',
+    kidtoys = 'Kids & Toys',
+    sports = 'Sports',
+    jewelery = 'Jewelery',
+    cellphone = 'Cellphone & Tab',
+    furniture = 'Furniture';
+    //................................
+
+
