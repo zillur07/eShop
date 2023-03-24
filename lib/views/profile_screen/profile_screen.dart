@@ -1,6 +1,5 @@
 import 'package:eshop_app/consts/lists.dart';
 import 'package:eshop_app/widgets_common/bg_wdget.dart';
-
 import '../../consts/consts.dart';
 import 'components/details_card.dart';
 
