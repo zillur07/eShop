@@ -88,6 +88,10 @@ class ProfileScreen extends StatelessWidget {
             itemCount: profileButtonsList.length,
             itemBuilder: (BuildContext context, int index) {
               return ListTile(
+                leading: Image.asset(
+                  profileButtonIcon[index],
+                  width: 22,
+                ),
                 title: profileButtonsList[index].text.make(),
               );
             },
