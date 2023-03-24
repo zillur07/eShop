@@ -1,4 +1,5 @@
 import 'package:eshop_app/consts/lists.dart';
+import 'package:eshop_app/views/category_screen/category_details.dart';
 import 'package:eshop_app/widgets_common/bg_wdget.dart';
 
 import '../../consts/consts.dart';
@@ -46,7 +47,9 @@ class CategoryScreen extends StatelessWidget {
                 ),
                 16.heightBox,
               ],
-            ).box.white.outerShadowSm.roundedSM.make();
+            ).box.white.outerShadowSm.roundedSM.make().onTap(() {
+              Get.to(() => CategoryDetails(title: categorysList[index]));
+            });
           },
         ),
       ),
