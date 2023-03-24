@@ -55,6 +55,12 @@ const womenClothing = 'Women clothing',
     jewelery = 'Jewelery',
     cellphone = 'Cellphone & Tab',
     furniture = 'Furniture';
-    //................................
+//................................
 
-
+// Item Details Strings
+const video = 'Video',
+    reviews = 'Reviews',
+    sellerPolicy = 'Seller Policy',
+    returnPolicy = 'Return Policy',
+    suppertPolicy = 'Support Policy',
+    productSyoumaylike = 'Products you may also like';

@@ -1,7 +1,4 @@
-import 'dart:math';
-
 import '../../consts/consts.dart';
-import '../../consts/lists.dart';
 import '../../widgets_common/applogo_widget.dart';
 import '../../widgets_common/bg_wdget.dart';
 import '../../widgets_common/custom_textfeld.dart';

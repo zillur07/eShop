@@ -1,7 +1,5 @@
 import 'package:eshop_app/consts/consts.dart';
 
-import '../../../consts/images.dart';
-
 Widget featureButton({String? title, icon}) {
   return Row(
     children: [

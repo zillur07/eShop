@@ -1,5 +1,4 @@
 import 'package:eshop_app/consts/consts.dart';
-import 'package:flutter/foundation.dart';
 
 // login page logo
 const socialIconList = [icFacebookLogo, icGoogleLogo, icTwitterLogo];
@@ -46,3 +45,12 @@ const categoryImages = [
   imgFc9
 ];
 //.................................
+// Item detail buttons List
+const itemDetailButtonsList = [
+  video,
+  reviews,
+  privacyPolicy,
+  returnPolicy,
+  suppertPolicy,
+];
+//..............
