@@ -10,6 +10,7 @@ const forgetPass = 'Forget Passord';
 const name = 'Name';
 const nameHint = 'Zillur Rahman';
 const login = 'Login';
+const logout = 'Logout';
 const signup = 'Sign up';
 const createNewAccount = 'or, create a new account';
 const LoginWith = 'Login with';
@@ -64,3 +65,7 @@ const video = 'Video',
     returnPolicy = 'Return Policy',
     suppertPolicy = 'Support Policy',
     productSyoumaylike = 'Products you may also like';
+//...........................
+
+// Profile stirngs
+const wishlist = 'My Wishlist', order = 'My Orders', messagse = 'Messages';
