@@ -37,6 +37,10 @@ dependencies:
   velocity_x:
   get:
   dio:
+  firebase_core: ^2.8.0
+  firebase_auth: ^4.3.0
+  firebase_storage: ^11.0.16
+  cloud_firestore: ^4.4.5
 
 dev_dependencies:
   flutter_test:
