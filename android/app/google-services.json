@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "215347800514",
+    "project_id": "e-shop-3f7ed",
+    "storage_bucket": "e-shop-3f7ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215347800514:android:1463d5020b79170348ce5b",
+        "android_client_info": {
+          "package_name": "com.example.eshop_zillur_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215347800514-mkdcierifoao2n6l50nn89mjrs1rr21u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eshop_zillur_app",
+            "certificate_hash": "95236cd5370b0476613ef79b71cde95d750194b0"
+          }
+        },
+        {
+          "client_id": "215347800514-umscvhqd26eaqn32an6tf0nfjclfovv0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9KQSPoqILYMwbnQ4dOcj2yGQrK6rIX3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215347800514-umscvhqd26eaqn32an6tf0nfjclfovv0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
