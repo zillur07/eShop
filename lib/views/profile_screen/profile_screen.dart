@@ -1,4 +1,6 @@
 import 'package:eshop_app/consts/lists.dart';
+import 'package:eshop_app/controllers/auth_controller.dart';
+import 'package:eshop_app/views/auth_screen/login_screen.dart';
 import 'package:eshop_app/widgets_common/bg_wdget.dart';
 import '../../consts/consts.dart';
 import 'components/details_card.dart';
@@ -49,7 +51,10 @@ class ProfileScreen extends StatelessWidget {
                         side: BorderSide(
                       color: whiteColor,
                     )),
-                    onPressed: () {},
+                    onPressed: () async {
+                      await Get.put(AuthController()).signoutMethod(context);
+                      Get.offAll(() => LoginScreen());
+                    },
                     child: logout.text.fontFamily(semibold).white.make())
               ],
             ),
